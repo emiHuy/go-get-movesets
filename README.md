@@ -1,7 +1,7 @@
 # GO Get Movesets
 
 ## Description
-This is a tkinter-based application that helps Pokemon Go users find optimal movesets for their pokemon, which are obtained through web scraping. This app provides a search bar with an option list that updates in real time and displays the results.
+This is a tkinter-based application that helps Pokémon GO users find optimal movesets for their Pokémon, which are obtained through web scraping. This app provides a search bar with an option list that updates in real time and displays the results.
 
 ## Project Metadata
 **Author:** Emily
@@ -11,8 +11,8 @@ This is a tkinter-based application that helps Pokemon Go users find optimal mov
 **Last Updated:** December 15, 2024
 
 ## Features
-- Search Pokemon by name
-- Display the optimal fast and charged moves for the searched Pokemon
+- Search Pokémon by name
+- Display the optimal fast and charged moves for the searched Pokémon
 - Simple, user-friendly interface
 
 ## Requirements
