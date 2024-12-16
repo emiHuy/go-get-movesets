@@ -5,7 +5,9 @@ This is a tkinter-based application that helps Pokemon Go users find optimal mov
 
 ## Project Metadata
 **Author:** Emily
+
 **Date Created:** December 15, 2024
+
 **Last Updated:** December 15, 2024
 
 ## Features
