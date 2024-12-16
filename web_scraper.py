@@ -2,6 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 
 def get_moveset(pokemon):
+    """
+    Function Description:
+        Fetches moveset of a given Pokemon from the Pokemon database
+    Parameters:
+        pokemon (str): Name of Pokemon being searched
+    Return:
+        tuple: Names of fast and charged attacks
+    """
     page = requests.get("https://pokemon.gameinfo.io/en/pokemon/"+pokemon)
     soup = BeautifulSoup(page.text, "html.parser")
     aTags = soup.findAll('a')
@@ -15,6 +23,12 @@ def get_moveset(pokemon):
     return moves[0], moves[1]
 
 def get_pokedex():
+    """
+    Function Description:
+        Fetches list of Pokemon names and ids from Pokedex page
+    Return:
+        tuple: List of pokemon names and list of their corresponding ids
+    """
     page = requests.get("https://pokemondb.net/go/pokedex")
     soup = BeautifulSoup(page.text, "html.parser")
     tags = soup.findAll("a", attrs={"class": "ent-name"})
@@ -36,4 +50,3 @@ def get_pokedex():
         pokemon_ids.append(line[1])
         
     return pokemon_list, pokemon_ids
-

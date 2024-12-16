@@ -12,6 +12,8 @@ This is a tkinter-based application that helps Pokémon GO users find optimal mo
 
 ## Features
 - Search Pokémon by name
+    - Type the Pokémon's name in the search bar
+    - Press **Enter** or click the **Search** button to perform the search
 - Display the optimal fast and charged moves for the searched Pokémon
 - Simple, user-friendly interface
 
