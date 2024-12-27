@@ -1,3 +1,8 @@
+# Filename:     app.py
+# Author:       Emily
+# Created:      December 15, 2024
+# Description:  This file implements the graphical user interface of the application.
+
 import tkinter as tk
 from tkinter import ttk
 import web_scraper as web

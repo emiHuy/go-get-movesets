@@ -1,3 +1,8 @@
+# Filename:     web_scraper.py
+# Author:       Emily
+# Created:      December 15, 2024
+# Description:  This file contains functions that fetch Pokemon data.
+  
 from bs4 import BeautifulSoup
 import requests
 
