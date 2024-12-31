@@ -8,7 +8,7 @@ This is a simple tkinter-based application that helps Pokémon GO users find opt
 
 **Date Created:** December 15, 2024
 
-**Last Updated:** December 27, 2024
+**Last Updated:** December 30, 2024
 
 ## Features
 - Search Pokémon by name

@@ -24,7 +24,7 @@ class App():
         root.title("GO Get Movesets")
         root.resizable(False, False)
         root.geometry("400x270")
-        root.iconbitmap("icon.ico")
+        root.iconbitmap("images/icon.ico")
         root.configure(bg="#DEEFF5")
         self.create_main_frame(root)
         self.create_search_frame()
@@ -62,7 +62,7 @@ class App():
         self.combobox.bind("<KeyRelease>", self.updateCombobox)
         self.combobox.bind("<KeyPress>", self.enter)
 
-        self.search_icon = tk.PhotoImage(master=self.search_frame, file="search.png")
+        self.search_icon = tk.PhotoImage(master=self.search_frame, file="images/search.png")
         self.search_button = tk.Button(self.search_frame, image=self.search_icon, width=32, height=32, command=self.search)
         self.search_button.grid(row=0, column=1)
     
