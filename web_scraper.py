@@ -25,6 +25,11 @@ def get_moveset(pokemon):
         href = a.get('href')
         if "/en/move/" in href:
             moves.append(info)
+
+    target_tag = soup.find('a', string=moves[1])
+    if target_tag.find_next().getText(strip=True) == "Elite TM":
+        moves[1] = moves[1]+"*"
+
     return moves[0], moves[1]
 
 def get_pokedex():
@@ -55,3 +60,9 @@ def get_pokedex():
         pokemon_ids.append(line[1])
         
     return pokemon_list, pokemon_ids
+
+if __name__ == "__main__":
+    p = input("Pokemon: ")
+    f,c = get_moveset(p)
+    print(f)
+    print(c)
