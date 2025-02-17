@@ -8,13 +8,13 @@ This is a simple tkinter-based application that helps Pokémon GO users find opt
 
 **Date Created:** December 15, 2024
 
-**Last Updated:** January 11, 2025
+**Last Updated:** February 17, 2025
 
 ## Features
 - Search Pokémon by name
     - Type the Pokémon's name in the search bar
     - Press **Enter** or click the **Search** button to perform the search
-- Display the optimal fast and charged moves for the searched Pokémon
+- Display the optimal fast and charged moves for the searched Pokémon. Charged attacks with '*' at the end require an Elite Charged TM.
 - Simple, user-friendly interface
 
 ## Requirements
@@ -24,7 +24,7 @@ This is a simple tkinter-based application that helps Pokémon GO users find opt
 
 ## File Information
 - app.py: GUI logic and main application entry point
-- web_scraper.py: Script for scraping Pokémon data
+- web_scraper.py: Script for scraping Pokémon data; can use on its own without GUI
 - README.md: Documentation for the project
 - search.png: image for search button
 - icon.ico: icon for program

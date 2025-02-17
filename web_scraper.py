@@ -20,12 +20,15 @@ def get_moveset(pokemon):
     aTags = soup.findAll('a')
 
     moves = []
+    count = 0
     for a in aTags:
         info = a.getText(strip=True)
         href = a.get('href')
         if "/en/move/" in href:
             moves.append(info)
-
+            count +=1
+            if count == 2:
+                break
     target_tag = soup.find('a', string=moves[1])
     if target_tag.find_next().getText(strip=True) == "Elite TM":
         moves[1] = moves[1]+"*"
@@ -62,7 +65,14 @@ def get_pokedex():
     return pokemon_list, pokemon_ids
 
 if __name__ == "__main__":
-    p = input("Pokemon: ")
-    f,c = get_moveset(p)
-    print(f)
-    print(c)
+    p = input("Pokemon ('quit' to quit): ")
+    while p.lower() != "quit":
+        try:
+            f,c = get_moveset(p)
+            print("Fast attack: " + f)
+            print("Charged attack: " + c)
+            p = input("\nPokemon ('quit' to quit): ")
+        except:
+            print("Pokemon does not exist in database.\n")
+            p = input("Pokemon ('quit' to quit): ")
+    print("Thanks for using GO Get Movesets!")
