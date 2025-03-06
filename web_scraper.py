@@ -17,22 +17,14 @@ def get_moveset(pokemon):
     """
     page = requests.get("https://pokemon.gameinfo.io/en/pokemon/"+pokemon)
     soup = BeautifulSoup(page.text, "html.parser")
-    aTags = soup.findAll('a')
+    moves = soup.select('a[href^="/en/move/"]')[:2]
 
-    moves = []
-    count = 0
-    for a in aTags:
-        info = a.getText(strip=True)
-        href = a.get('href')
-        if "/en/move/" in href:
-            moves.append(info)
-            count +=1
-            if count == 2:
-                break
-    target_tag = soup.find('a', string=moves[1])
-    if target_tag.find_next().getText(strip=True) == "Elite TM":
-        moves[1] = moves[1]+"*"
-
+    for i in range(2):
+        moves[i] = moves[i].get_text(strip=True)
+        target_tag = soup.find('a', string=moves[i])
+        if target_tag.find_next().get_text(strip=True) == "Elite TM":
+            moves[i] += "*"
+            
     return moves[0], moves[1]
 
 def get_pokedex():
