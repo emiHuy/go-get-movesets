@@ -4,11 +4,9 @@
 This is a simple tkinter-based application that helps Pokémon GO users find optimal movesets for their Pokémon, which are obtained through web scraping. This app provides a search bar with an option list that updates in real-time and displays the results.
 
 ## Project Metadata
-**Author:** Emily
-
-**Date Created:** December 15, 2024
-
-**Last Updated:** March 6, 2025
+**Author:** Emily  
+**Date Created:** December 15, 2024  
+**Last Updated:** March 6, 2025  
 
 ## Features
 - Search Pokémon by name
@@ -23,8 +21,8 @@ This is a simple tkinter-based application that helps Pokémon GO users find opt
 - Install the necessary dependencies using the `requirements.txt` file
 
 ## File Information
-- app.py: GUI logic and main application entry point
-- web_scraper.py: Script for scraping Pokémon data; can use on its own without GUI
-- README.md: Documentation for the project
-- search.png: image for search button
-- icon.ico: icon for program
+- `app.py`: GUI logic and main application entry point
+- `web_scraper.py`: Script for scraping Pokémon data; can use on its own without GUI
+- `README.md`: Documentation for the project
+- `search.png`: image for search button
+- `icon.ico`: icon for program
