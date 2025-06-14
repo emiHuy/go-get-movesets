@@ -24,5 +24,8 @@ This is a simple tkinter-based application that helps Pokémon GO users find opt
 - `app.py`: GUI logic and main application entry point
 - `web_scraper.py`: Script for scraping Pokémon data; can use on its own without GUI
 - `README.md`: Documentation for the project
-- `search.png`: image for search button
+- `utils.py`: contains helper function for handling file paths
+
+### /images/
 - `icon.ico`: icon for program
+- `search.png`: image for search button
