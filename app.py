@@ -7,19 +7,10 @@ import tkinter as tk
 from tkinter import ttk
 import web_scraper as web
 
-def fetchPokemonData():
-    """
-    Function Description:
-        Fetches list of pokemon names and list of their corresponding ids
-    Return:
-        tuple: List of pokemon names and list of their corresponding ids
-    """
-    return web.get_pokedex()
-
 class App():
     def __init__(self, root):
-        # Fetch Pokemon data
-        self.pokemon_list,self.pokemon_ids = fetchPokemonData()
+        # Fetch Pokedex data
+        self.pokemon_list,self.pokemon_ids = web.get_pokedex()
         # Set up window
         root.title("GO Get Movesets")
         root.resizable(False, False)
@@ -134,6 +125,7 @@ class App():
             # Show error message if pokemon cannot be found in website's database
             self.intro.configure(text="Error: Pokemon does not exist in database.", font=("Arial", 14), fg="red")
             root.after(1500, self.clear_label_config)
+        self.combobox["value"] = self.pokemon_list
 
 if __name__ == "__main__":
     root = tk.Tk()
